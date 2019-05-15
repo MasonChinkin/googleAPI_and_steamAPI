@@ -3,9 +3,12 @@ import React from 'react';
 const NavBar = () => {
   return (
     <header>
-      <h2>This is a navbar</h2>
+      <img src="./SigTac5.png" alt="sigtac logo" />
       <div>
         <button>Home</button>
+        <button>Roster</button>
+        <button>Events</button>
+        <button>Apply to Join!</button>
       </div>
     </header>
   );

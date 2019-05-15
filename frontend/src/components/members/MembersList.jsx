@@ -17,13 +17,15 @@ class MembersList extends Component {
   render() {
     if (this.state.loaded === false) return null;
     let members = this.props.members
-    members.map(member => {
-      return <MembersListItem member={member} />
+    members = members.map((member, i) => {
+      return <MembersListItem member={member} key={i} />
     })
     return (
-      <div>
-        {members}
-      </div>
+      <h1>
+        <ul className="members-list">
+          {members}
+        </ul>
+      </h1>
     );
   }
 }

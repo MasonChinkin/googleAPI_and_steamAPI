@@ -6,7 +6,8 @@ const MembersReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_MEMBERS:
-      return action.payload.data
+      let members = action.payload.data
+      return members.slice(1) // remove column headers
     default:
       return state;
   }
