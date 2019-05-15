@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-// import MembersListItem from './MembersListItem';
+import MembersListItem from './MembersListItem';
 
 class MembersList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false
+    }
+  }
+
   componentDidMount() {
-    // let members = fetch()
+    this.props.requestMembers()
+      .then(() => this.setState({ loaded: true }))
   }
 
   render() {
-    // members.map(member => {
-    //   return <MembersListItem member={member} />
-    // })
+    if (this.state.loaded === false) return null;
+    let members = this.props.members
+    members.map(member => {
+      return <MembersListItem member={member} />
+    })
     return (
       <div>
-        {/* {members} */}
+        {members}
       </div>
     );
   }
