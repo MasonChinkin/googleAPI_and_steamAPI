@@ -4,13 +4,13 @@ const {
   google
 } = require('googleapis');
 const sheets = google.sheets('v4');
-const privateKeyJSON = require('../bin/privateKey.json')
 
 let clientEmail, privateKey;
 if (process.env.NODE_ENV === 'production') {
   clientEmail = process.env.GOOGLEAPI_CREDENTIALS.client_email
   privateKey = process.env.GOOGLEAPI_CREDENTIALS.private_key
 } else {
+  const privateKeyJSON = require('../bin/privateKey.json')
   clientEmail = privateKey.client_email
   privateKey = privateKeyJSON.private_key
 }
