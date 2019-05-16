@@ -1,14 +1,18 @@
 import React from 'react';
+import NavButton from './NavButton';
 
-const NavBar = () => {
+const NavBar = props => {
+
+  const handleClick = (e) => props.history.push(`/Home`)
+
   return (
     <header>
-      <img src="./SigTac5.png" alt="sigtac logo" />
+      <img onClick={handleClick} src="./SigTac5.png" alt="sigtac logo" />
       <div>
-        <button>Home</button>
-        <button>Roster</button>
-        <button>Events</button>
-        <button>Apply to Join!</button>
+        <NavButton link={"Home"} />
+        <NavButton link={"Roster"} />
+        <NavButton link={"Events"} />
+        <NavButton link={"Join"} />
       </div>
     </header>
   );

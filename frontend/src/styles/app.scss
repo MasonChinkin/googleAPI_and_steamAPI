@@ -1,4 +1,52 @@
 @import './reset.scss';
 @import './navbar.scss';
-@import './footer.scss';
 @import './member-list.scss';
+@import './home.scss';
+@import './events.scss';
+@import './join.scss';
+
+body {
+  font-family: 'Lato',
+    sans-serif !important;
+}
+
+main {
+  min-height: 80vh;
+  width: 100%;
+  overflow: hidden;
+
+  & h1 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  & h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  & li,
+  p {
+    line-height: 1.1rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  & ul {
+    list-style: square outside;
+    position: relative;
+    left: 2rem;
+  }
+
+  & li {
+    margin-bottom: 0.4rem;
+  }
+
+  & section {
+    width: 70vw;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+}
