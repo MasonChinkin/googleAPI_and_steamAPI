@@ -15,7 +15,7 @@ header {
   }
 }
 
-.nav-button {
+[class$='nav-button'] {
   cursor: pointer;
   padding: 0.4rem 0.8rem;
 
