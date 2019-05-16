@@ -7,8 +7,8 @@ const sheets = google.sheets('v4');
 
 let clientEmail, privateKey;
 if (process.env.NODE_ENV === 'production') {
-  clientEmail = process.env.GOOGLEAPI_CREDENTIALS.client_email
-  privateKey = process.env.GOOGLEAPI_CREDENTIALS.private_key
+  clientEmail = process.env.GOOGLEAPI_CREDENTIALS_CLIENT_EMAIL
+  privateKey = process.env.GOOGLEAPI_CREDENTIALS_PRIVATE_KEY
 } else {
   const privateKeyJSON = require('../bin/privateKey.json')
   clientEmail = privateKeyJSON.client_email
