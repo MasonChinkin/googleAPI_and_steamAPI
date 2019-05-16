@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
   privateKey = process.env.GOOGLEAPI_CREDENTIALS.private_key
 } else {
   const privateKeyJSON = require('../bin/privateKey.json')
-  clientEmail = privateKey.client_email
+  clientEmail = privateKeyJSON.client_email
   privateKey = privateKeyJSON.private_key
 }
 
