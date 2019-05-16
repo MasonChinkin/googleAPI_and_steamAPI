@@ -2,10 +2,10 @@ import React from 'react';
 
 const Events = () => {
   return (
-    <main>
+    <main className="events">
       <section>
         <h1 className="events-title">UPCOMING EVENTS</h1>
-        <div className="calendar-placeholder"></div>
+        <div className="calendar-placeholder backdrop"></div>
       </section>
     </main>
   );

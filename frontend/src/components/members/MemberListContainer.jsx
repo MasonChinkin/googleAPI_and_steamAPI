@@ -3,7 +3,7 @@ import { requestMembers } from '../../actions/membersActions';
 import MembersList from './MembersList';
 
 const mSP = ({ entities }) => ({
-  members: entities.members
+  members: Object.values(entities.members)
 })
 
 const mDP = dispatch => ({

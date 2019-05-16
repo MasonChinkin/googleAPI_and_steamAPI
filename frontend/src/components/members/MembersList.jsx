@@ -17,30 +17,46 @@ class MembersList extends Component {
 
   render() {
     let roster;
-    if (this.state.loaded === false) {
+    let members = this.props.members
+    if (members.length === 0 && this.state.loaded === false) {
       roster = <section className="spinner-parent">
         <Loader
           type="Triangle"
-          color="lightGrey"
+          color="black"
           height="300"
           width="300"
         />
       </section>
     } else {
-      let members = this.props.members
-      members = members.map((member, i) => {
-        return <MembersListItem member={member} key={i} />
+      let leadership = []
+      let otherMembers = []
+      members.forEach((member, i) => {
+        let tier = member[1];
+        (tier.includes('T3')) ?
+          otherMembers.push(< MembersListItem member={member} key={i} />) :
+          leadership.push(< MembersListItem member={member} key={i} />)
       })
 
-      roster = <section>
-        <ul className="members-list">
-          {members}
-        </ul>
+      roster = <section className="members-list backdrop">
+        <div className="leadership">
+          <h3>Leadership</h3>
+          <ul>
+            {leadership}
+          </ul>
+        </div>
+
+        <div className="other-members">
+          <h3>Members</h3>
+          <ul>
+            {otherMembers}
+          </ul>
+        </div>
+
       </section>
     }
 
     return (
-      <main>
+      <main className="roster">
         <section>
           <h1>Sigtac's roster</h1>
           <h2>We are a democratic organization with blah blah blah</h2>

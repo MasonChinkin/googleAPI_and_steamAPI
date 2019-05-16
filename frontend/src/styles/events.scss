@@ -1,10 +1,14 @@
+.events>section {
+  margin: auto;
+}
+
 .events-title {
   text-align: center;
+  margin-bottom: 10vh;
+
 }
 
 .calendar-placeholder {
   height: 50vh;
   width: 70vw;
-  margin: 5vh auto;
-  border: 1px black solid;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <main>
+    <main className='home'>
       <section className="home-title">
         <h1>We are Sigma Tactical</h1>
         <h2>A Squad-centric gaming community</h2>
@@ -21,7 +21,6 @@ const Home = () => {
           <p>To maximize your capacity in the game, you must first understand its limits and where it deviates from reality. We strive to actualize these mechanisms to leverage in game.</p>
         </div>
       </section>
-      <div className="home-hero-image"></div>
     </main>
   );
 }

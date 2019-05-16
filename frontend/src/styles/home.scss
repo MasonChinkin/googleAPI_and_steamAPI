@@ -1,11 +1,20 @@
-.motto-container {
+.home {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.home-hero-image {
-  height: 60vh;
-  background-image: url('https://vignette.wikia.nocookie.net/southpark/images/c/cb/WorldofWarcraft11.jpg/revision/latest?cb=20100303001128');
-  background-size: cover;
-  background-position-y: bottom;
-  opacity: 0.8;
+.motto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  width: 100vw;
+  min-height: 15vh;
+}
+
+.motto {
+  margin: 0.5rem 2rem;
+  text-align: center;
+  width: 25vw;
 }
