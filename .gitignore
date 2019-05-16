@@ -25,3 +25,4 @@ yarn-error.log*
 
 # keys
 bin/privateKey.json
+bin/testPrivateKey.json

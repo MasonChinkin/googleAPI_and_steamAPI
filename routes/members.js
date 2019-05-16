@@ -20,8 +20,8 @@ router.get('/', function (req, res, next) {
   });
 
   let request = {
-    spreadsheetId: '1AuE8xWqvRqyM1FRWJPjhVXRuHfUcal5bgHx6jkcyA7M', // TODO: Update placeholder value.
-    range: 'sheet1', // TODO: Update placeholder value.
+    spreadsheetId: '1i1G-XpcjXXe0X012ovtwZC7uJ4ADOsVB6W_Gw8vWngs', // TODO: Update placeholder value.
+    range: 'Public VIew', // TODO: Update placeholder value.
     auth: jwtClient,
   };
 
@@ -30,6 +30,7 @@ router.get('/', function (req, res, next) {
       console.error(err);
       return;
     }
+
     res.status(200).json(response.data.values)
   })
 })
