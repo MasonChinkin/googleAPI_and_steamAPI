@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
   let jwtClient = new google.auth.JWT(
     keys.client_email,
     null,
-    keys.private_key,
+    keys.private_key.replace(/\\n/g, '\n'),
     ['https://www.googleapis.com/auth/spreadsheets.readonly']);
   //authenticate request
   jwtClient.authorize(function (err, tokens) {
