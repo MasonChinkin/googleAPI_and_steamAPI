@@ -4,6 +4,7 @@ const {
   google
 } = require('googleapis');
 const sheets = google.sheets('v4');
+const privateKeyJSON = require('../bin/privateKey.json')
 
 let clientEmail, privateKey;
 if (process.env.NODE_ENV === 'production') {
@@ -11,10 +12,9 @@ if (process.env.NODE_ENV === 'production') {
   privateKey = process.env.GOOGLEAPI_CREDENTIALS.private_key
 } else {
   clientEmail = privateKey.client_email
-  privateKey = privateKey.private_key
+  privateKey = privateKeyJSON.private_key
 }
 
-const privateKey = require('../bin/privateKey.json')
 
 router.get('/', function (req, res, next) {
 
