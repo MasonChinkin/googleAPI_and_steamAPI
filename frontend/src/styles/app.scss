@@ -18,29 +18,29 @@ main {
   overflow: hidden;
 
   & h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   & h2 {
     margin-bottom: 0.5rem;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   & h3 {
     margin-bottom: 0.5rem;
     font-weight: 400;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px black solid;
   }
 
   & li,
   p {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 
   & li {
@@ -57,7 +57,7 @@ main {
 .backdrop {
   width: 70vw;
   background-color: whitesmoke;
-  opacity: 0.8;
+  opacity: 0.9;
   margin: 0 auto;
   border-radius: 1rem;
 }

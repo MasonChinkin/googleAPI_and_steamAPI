@@ -5,7 +5,7 @@ const Join = props => {
     <main className="join">
       <div className="backdrop">
         <section className="join-intro">
-          <h1>Joining SigTac is a pretty simple process</h1>
+          <h2>Joining SigTac is a pretty simple process</h2>
           <div>
             <ul>
               <li>Be cool.</li>

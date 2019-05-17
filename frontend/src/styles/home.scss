@@ -5,10 +5,14 @@
   padding: 0;
 }
 
+.motto-backdrop {
+  background-color: whitesmoke;
+  opacity: 0.8;
+}
+
 .motto-container {
   display: flex;
   justify-content: center;
-  background: lightgray;
   width: 100vw;
   min-height: 15vh;
 }
@@ -17,4 +21,5 @@
   margin: 0.5rem 2rem;
   text-align: center;
   width: 25vw;
+  opacity: 1 !important;
 }

@@ -7,7 +7,7 @@ const Home = () => {
         <h1>We are Sigma Tactical</h1>
         <h2>A Squad-centric gaming community</h2>
       </section>
-      <section className="motto-container">
+      <section className="motto-container motto-backdrop">
         <div className="motto">
           <h2>GOOD PEOPLE</h2>
           <p>Its easier to fix a bad shooter than a bad personality. Sig-Tac prides ourselves on being a community of reasonably tolerable people.</p>

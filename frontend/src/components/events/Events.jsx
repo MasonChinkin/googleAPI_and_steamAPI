@@ -4,8 +4,8 @@ const Events = () => {
   return (
     <main className="events">
       <section>
-        <h1 className="events-title">UPCOMING EVENTS</h1>
-        <div className="calendar-placeholder backdrop"></div>
+        <h2 className="events-title">UPCOMING EVENTS</h2>
+        <div className="calendar-placeholder backdrop">placeholder</div>
       </section>
     </main>
   );
