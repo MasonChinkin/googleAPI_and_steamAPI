@@ -18,12 +18,21 @@ header {
   &>div {
     font-size: 1.2rem;
     margin-right: 3vw;
+    display: flex;
+    justify-content: space-around;
   }
+}
+
+.discord {
+  background-color: steelblue;
+  color: white;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
 }
 
 [class$='nav-button'] {
   cursor: pointer;
-  padding: 0.4rem 0.8rem;
+  padding: 0.25rem 0.4rem;
 
   &:hover {
     filter: brightness(85%)
@@ -32,12 +41,6 @@ header {
 
 .active-nav-button {
   border-bottom: 2px solid black;
-}
-
-header>div {
-  display: flex;
-  justify-content: space-around;
-  width: 30vw;
 }
 
 footer {

@@ -3,12 +3,13 @@ import NavButton from './NavButton';
 
 const NavBar = props => {
 
-  const handleClick = (e) => props.history.push(`/Home`)
+  const handleLogoClick = event => props.history.push(`/Home`)
 
   return (
     <header>
-      <img onClick={handleClick} src="./SigTac5.png" alt="sigtac logo" />
+      <img onClick={handleLogoClick} src="./SigTac5.png" alt="sigtac logo" />
       <div>
+        <a className="discord nav-button" href="https://discord.gg/Zg7jch7" target="_blank">Discord</a>
         <NavButton link={"Home"} />
         <NavButton link={"Roster"} />
         <NavButton link={"Events"} />
