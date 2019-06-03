@@ -26,32 +26,21 @@ router.get('/', function (req, res, next) {
     auth: jwtClient,
   };
 
-  // sheets.spreadsheets.values.get(sheetsRequest, function (err, response) {
-  //   if (err) {
-  //     console.error(err);
-  //     return;
-  //   }
-
-
-  //   res.status(200).json(response.data.values)
-  // })
-
   // Steam
 
   const steam = new SteamAPI(keys.steam_api);
 
-  sheets.spreadsheets.values.get(sheetsRequest, function (err, response) {
+  sheets.spreadsheets.values.get(sheetsRequest, function (err, sheetsResponse) {
     if (err) {
       console.error(err);
       return;
     }
 
-    let members = response.data.values.slice(1)
-    members = Promise.all(members.map(member => memberDetailsFetch(member, steam)))
-
-    members.then(res => console.log(res))
-
-    // res.status(200).json(members)
+    let members = sheetsResponse.data.values.slice(1)
+    Promise.all(members.map(member => memberDetailsFetch(member, steam)))
+      .then(steamResponse => {
+        res.status(200).json(steamResponse)
+      })
   })
 })
 
@@ -65,7 +54,7 @@ const memberDetailsFetch = (member, steam) => {
   }
   if (!profile.steamID) return profile
 
-  Promise.all([
+  return Promise.all([
       steam.getUserSummary(profile.steamID),
       steam.getUserRecentGames(profile.steamID)
     ])
@@ -82,7 +71,6 @@ const memberDetailsFetch = (member, steam) => {
 
       profile.country = summary.countryCode
       profile.avatar = summary.avatar
-      console.log(profile)
       return profile
     })
 }

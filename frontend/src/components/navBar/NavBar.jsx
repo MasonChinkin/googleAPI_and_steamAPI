@@ -9,7 +9,7 @@ const NavBar = props => {
     <header>
       <img onClick={handleLogoClick} src="./SigTac5.png" alt="sigtac logo" />
       <div>
-        <a className="discord nav-button" href="https://discord.gg/Zg7jch7" target="_blank">Discord</a>
+        <a className="discord nav-button" href="https://discord.gg/Zg7jch7" target="_blank" rel="noopener noreferrer">Discord</a>
         <NavButton link={"Home"} />
         <NavButton link={"Roster"} />
         <NavButton link={"Events"} />
