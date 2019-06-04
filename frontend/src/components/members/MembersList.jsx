@@ -31,7 +31,7 @@ class MembersList extends Component {
       let leadership = []
       let otherMembers = []
       members.forEach((member, i) => {
-        let tier = member[1];
+        let tier = member.tier;
         (tier.includes('T3')) ?
           otherMembers.push(< MembersListItem member={member} key={i} />) :
           leadership.push(< MembersListItem member={member} key={i} />)

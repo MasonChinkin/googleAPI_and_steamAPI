@@ -3,12 +3,6 @@
   flex-wrap: wrap;
 }
 
-.roster li {
-  padding: 0.5rem;
-  margin: 0.5rem 1rem;
-  font-weight: 400;
-}
-
 .roster {
   text-align: center;
 }
@@ -18,7 +12,20 @@
 }
 
 .leadership {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.member-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  font-weight: 400;
+
+  & img {
+    height: 4rem;
+    margin-bottom: 0.2rem;
+  }
 }
 
 .spinner-parent {

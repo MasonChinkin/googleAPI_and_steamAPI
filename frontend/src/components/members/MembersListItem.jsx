@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 
 class MembersListItem extends Component {
   render() {
-    let username = this.props.member[0]
+    const avatar = this.props.member.avatar ?
+      this.props.member.avatar.medium :
+      'http://chittagongit.com/images/profile-png-icon/profile-png-icon-13.jpg';
     return (
-      <li className="members-list-item">
-        {username}
-      </li>
+      <div className="member-list-item">
+        <img src={avatar} alt="avatar" />
+        <li>
+          {this.props.member.name}
+        </li>
+      </div>
     );
   }
 }
