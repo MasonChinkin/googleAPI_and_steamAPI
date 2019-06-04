@@ -9,6 +9,8 @@
 
 .members-list {
   margin-bottom: 1rem !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .leadership {
@@ -21,10 +23,12 @@
   align-items: center;
   padding: 0.8rem;
   font-weight: 400;
+  flex: 1 1 6rem;
 
   & img {
     height: 4rem;
     margin-bottom: 0.2rem;
+    border-radius: 5px;
   }
 }
 
