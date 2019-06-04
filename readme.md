@@ -46,7 +46,7 @@ sheets.spreadsheets.values.get(sheetsRequest, function (err, sheetsResponse) {
 
 ## ~50 Steam API calls at once
 
-I needed to make 2 seperate Steam API calls for each member. This is done using nested promises. The upper level promise is above, mapping over the array of members with a helper function, which contains the inner promise:
+I needed to make 2 seperate Steam API calls for each member. This is done using nested Promise.alls. The upper level Promise.all is in the above snippet, mapping over the array of members with a helper function, which contains the inner Promise.all:
 
 ```javascript
 const memberDetailsFetch = (member, steam) => {
