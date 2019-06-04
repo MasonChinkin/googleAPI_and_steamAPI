@@ -28,7 +28,6 @@ router.get('/', function (req, res, next) {
 
   // Steam
 
-  const steam = new SteamAPI(keys.steam_api);
 
   sheets.spreadsheets.values.get(sheetsRequest, function (err, sheetsResponse) {
     if (err) {
@@ -36,6 +35,7 @@ router.get('/', function (req, res, next) {
       return;
     }
 
+    const steam = new SteamAPI(keys.steam_api);
     let members = sheetsResponse.data.values.slice(1)
     Promise.all(members.map(member => memberDetailsFetch(member, steam)))
       .then(steamResponse => {
@@ -62,12 +62,12 @@ const memberDetailsFetch = (member, steam) => {
       const summary = res[0]
       const recentGames = res[1]
 
-      for (let i = 0; i < recentGames.length; i++) {
-        if (recentGames[i].name === "Squad") {
-          profile.squadTime = recentGames[i].playTime / 60 // for hours
-          break
-        }
-      }
+      // for (let i = 0; i < recentGames.length; i++) {
+      //   if (recentGames[i].name === "Squad") {
+      //     profile.squadTime = recentGames[i].playTime / 60 // for hours
+      //     break
+      //   }
+      // }
 
       profile.country = summary.countryCode
       profile.avatar = summary.avatar
