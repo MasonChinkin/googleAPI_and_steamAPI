@@ -44,7 +44,7 @@ sheets.spreadsheets.values.get(sheetsRequest, function (err, sheetsResponse) {
 })
 ```
 
-## 93 Steam API calls at once
+## 93x2 Steam API calls at once using nested promises
 
 I needed to make 2 seperate Steam API calls for each member. This is done using nested Promise.alls. The upper level Promise.all is in the above snippet, mapping over the array of members with a helper function, which contains the inner Promise.all:
 
