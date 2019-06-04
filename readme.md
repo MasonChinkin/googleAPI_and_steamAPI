@@ -1,4 +1,4 @@
-# Using Sheets as a database plu a little Steam API
+# Using Sheets as a database plus a little Steam API
 
 This read-only website uses Google Sheets' API as a database and populates roster avatars using Steam's API. Descriptions of how I did this in an Express.js route below.
 
@@ -44,7 +44,7 @@ sheets.spreadsheets.values.get(sheetsRequest, function (err, sheetsResponse) {
 })
 ```
 
-## ~50 Steam API calls at once
+## 93 Steam API calls at once
 
 I needed to make 2 seperate Steam API calls for each member. This is done using nested Promise.alls. The upper level Promise.all is in the above snippet, mapping over the array of members with a helper function, which contains the inner Promise.all:
 
@@ -65,6 +65,7 @@ const memberDetailsFetch = (member, steam) => {
     .then(res => {
       const summary = res[0]
       const recentGames = res[1]
+      // not currently using recentGames due to people's privacy settings being too high
       profile.country = summary.countryCode
       profile.avatar = summary.avatar
       return profile
