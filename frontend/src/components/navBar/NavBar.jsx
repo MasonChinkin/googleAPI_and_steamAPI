@@ -13,7 +13,7 @@ const NavBar = props => {
         <NavButton link={"Home"} />
         <NavButton link={"Roster"} />
         <NavButton link={"Events"} />
-        <NavButton link={"Join"} />
+        {/* <NavButton link={"Join"} /> */}
       </div>
     </header>
   );

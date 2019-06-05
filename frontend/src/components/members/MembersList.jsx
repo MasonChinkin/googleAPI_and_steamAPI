@@ -59,7 +59,6 @@ class MembersList extends Component {
       <main className="roster">
         <section>
           <h1>Sigtac's roster</h1>
-          <h2>We are a democratic organization with blah blah blah</h2>
         </section>
         {roster}
       </main>
