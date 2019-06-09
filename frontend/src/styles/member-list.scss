@@ -1,8 +1,3 @@
-.roster ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .roster {
   text-align: center;
 }
@@ -26,7 +21,6 @@
   align-items: center;
   padding: 0.8rem;
   font-weight: 400;
-  // width: 7rem;
 
   & img {
     height: 4rem;
@@ -37,4 +31,10 @@
 
 .spinner-parent {
   text-align: center;
+}
+
+@media only screen and (max-width: 720px) {
+  .members-list ul {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  }
 }

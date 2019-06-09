@@ -7,3 +7,15 @@
   width: 100%;
   height: 70vh;
 }
+
+@media only screen and (max-width: 720px) {
+  .events section {
+    width: auto;
+    padding: 0;
+  }
+
+  .events {
+    position: absolute;
+    bottom: 0;
+  }
+}

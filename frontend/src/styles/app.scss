@@ -12,6 +12,11 @@ body {
   background-size: cover;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 main {
   min-height: 85vh;
   width: 100%;
@@ -60,4 +65,12 @@ main {
   opacity: 0.9;
   margin: 0 auto;
   border-radius: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .backdrop {
+    width: auto;
+    margin: auto;
+    border-radius: 0;
+  }
 }

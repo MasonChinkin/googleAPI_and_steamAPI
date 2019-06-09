@@ -23,3 +23,26 @@
   width: 25vw;
   opacity: 1 !important;
 }
+
+@media only screen and (max-width: 720px) {
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  .motto-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .motto {
+    width: auto;
+    margin: 1rem 0.5rem;
+  }
+
+  .motto-container {
+    width: auto;
+  }
+}

@@ -53,3 +53,20 @@ footer {
     margin-left: 2rem;
   }
 }
+
+@media only screen and (max-width: 720px) {
+
+  header {
+    display: block;
+    height: auto;
+    padding: 1rem 0;
+
+    & img {
+      display: none;
+    }
+  }
+
+  footer {
+    display: none;
+  }
+}
