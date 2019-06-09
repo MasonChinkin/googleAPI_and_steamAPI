@@ -149,3 +149,9 @@ body {
 body:hover {
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 720px) {
+  body {
+    overflow-y: scroll;
+  }
+}
