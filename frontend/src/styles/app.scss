@@ -48,10 +48,6 @@ main {
     font-weight: 400;
   }
 
-  & li {
-    margin-bottom: 0.8rem;
-  }
-
   & section {
     width: 70vw;
     padding: 1rem;
@@ -76,5 +72,20 @@ main {
 
   main {
     overflow: scroll;
+
+    & h1 {
+      font-size: 1.8rem;
+    }
+
+    & h2,
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    & p,
+    li {
+      font-size: 1rem;
+    }
   }
+
 }
