@@ -9,6 +9,11 @@
 
 .members-list {
   margin-bottom: 1rem !important;
+
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
 }
 
 .leadership {
@@ -21,7 +26,7 @@
   align-items: center;
   padding: 0.8rem;
   font-weight: 400;
-  width: 7rem;
+  // width: 7rem;
 
   & img {
     height: 4rem;
