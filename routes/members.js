@@ -41,6 +41,10 @@ router.get('/', function (req, res, next) {
       .then(steamResponse => {
         res.status(200).json(steamResponse)
       })
+      .catch(err => {
+        // console.log('err: ', err)
+        res.status(404).send("Roster could not be found. It is either gumby7 or Ikagara's fault.")
+      })
   })
 })
 

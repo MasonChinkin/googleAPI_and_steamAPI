@@ -11,14 +11,18 @@ class MembersList extends Component {
   }
 
   componentDidMount() {
+    if (this.state.loaded) {
+      return;
+    }
+
     this.props.requestMembers()
       .then(() => this.setState({ loaded: true }))
   }
 
   render() {
     let roster;
-    let members = this.props.members
-    if (members.length === 0 && this.state.loaded === false) {
+    let { members, membersError } = this.props
+    if (this.state.loaded === false) {
       roster = <section className="spinner-parent">
         <Loader
           type="Triangle"
@@ -27,9 +31,13 @@ class MembersList extends Component {
           width="300"
         />
       </section>
+    } else if (members.length === 0) {
+      roster = <h2 className="error">{membersError.data}</h2>
     } else {
       let leadership = []
       let otherMembers = []
+      console.log(members)
+      console.log(members)
       members.forEach((member, i) => {
         let tier = member.tier;
         (tier.includes('T3') || !tier) ?

@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import { requestMembers } from '../../actions/membersActions';
 import MembersList from './MembersList';
 
-const mSP = ({ entities }) => ({
-  members: Object.values(entities.members)
+const mSP = ({ entities, errors }) => ({
+  members: Object.values(entities.members),
+  membersError: errors.membersError
 })
 
 const mDP = dispatch => ({

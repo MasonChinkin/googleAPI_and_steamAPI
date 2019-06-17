@@ -46,3 +46,11 @@
     margin-bottom: 0.5rem;
   }
 }
+
+.error {
+  display: inline-block;
+  color: red;
+  padding: 1rem;
+  background: rgba(256, 256, 256, 0.9);
+  border-radius: 4px;
+}
