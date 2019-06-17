@@ -11,7 +11,8 @@ class MembersList extends Component {
   }
 
   componentDidMount() {
-    if (this.state.loaded) {
+    if (this.props.members.length > 0) {
+      this.setState({ loaded: true })
       return;
     }
 
