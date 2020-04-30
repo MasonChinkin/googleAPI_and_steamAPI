@@ -1,16 +1,31 @@
-.events-title {
-  text-align: center;
-  margin: 2vh 0;
-}
-
-.calendar {
-  width: 100%;
-  height: 70vh;
-}
-
-@media only screen and (max-width: 720px) {
-  .events section {
-    width: auto;
-    padding: 2rem 0;
+.events {
+  .events-title {
+    text-align: center;
+    margin: 2vh 0;
+  }
+  
+  .calendar {
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  
+    &.loaded {
+      position: initial;
+    }
+  }
+  
+  .react-spinner-loader-svg {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+  }
+  
+  @media only screen and (max-width: 720px) {
+    .events section {
+      width: auto;
+      padding: 2rem 0;
+    }
   }
 }

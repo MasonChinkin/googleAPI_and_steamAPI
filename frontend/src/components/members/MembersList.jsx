@@ -37,8 +37,6 @@ class MembersList extends Component {
     } else {
       let leadership = []
       let otherMembers = []
-      console.log(members)
-      console.log(members)
       members.forEach((member, i) => {
         let tier = member.tier;
         (tier.includes('T3') || !tier) ?
