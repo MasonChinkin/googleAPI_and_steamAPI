@@ -3,7 +3,9 @@
 }
 
 .members-list {
+  height: 80vh;
   margin-bottom: 1rem !important;
+  overflow-y: scroll;
 
   & ul {
     display: grid;

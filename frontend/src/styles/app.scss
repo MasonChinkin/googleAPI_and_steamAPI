@@ -61,6 +61,7 @@ main {
   opacity: 0.9;
   margin: 0 auto;
   border-radius: 1rem;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 720px) {
