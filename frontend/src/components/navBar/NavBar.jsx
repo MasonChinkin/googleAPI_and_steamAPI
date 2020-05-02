@@ -1,5 +1,6 @@
 import React from 'react';
 import NavButton from './NavButton';
+import { withRouter } from 'react-router-dom'
 
 const NavBar = props => {
 
@@ -19,4 +20,4 @@ const NavBar = props => {
   );
 }
 
-export default NavBar;
+export default withRouter(NavBar);
