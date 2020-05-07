@@ -1,17 +1,18 @@
-var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
+var express = require('express');
 var logger = require('morgan');
+var path = require('path');
+var sslRedirect = require('heroku-ssl-redirect');
 
 var membersRouter = require('./routes/members');
 
 var app = express();
 
+// enable ssl redirect
+app.use(sslRedirect());
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({
-  extended: false
-}));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/members', membersRouter);
