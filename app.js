@@ -9,7 +9,7 @@ var membersRouter = require('./routes/members');
 var app = express();
 
 // enable ssl redirect
-app.use(sslRedirect());
+// app.use(sslRedirect());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
